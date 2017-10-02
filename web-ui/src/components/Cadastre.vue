@@ -1,5 +1,5 @@
 <template>
-     <div>Em construção.</div>
+    <h2>Cadastre-se!</h2>
 </template>
 
 <script>
