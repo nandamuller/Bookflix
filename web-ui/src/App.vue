@@ -2,9 +2,11 @@
     <div id="app" class="viewport">
         <md-whiteframe md-elevation="3">
             <md-toolbar class="toolbar">
-                <md-button class="md-icon-button">
-                    <md-icon>book</md-icon>
-                </md-button>
+                <router-link to="/home">
+                    <md-button class="md-icon-button">
+                        <md-icon>book</md-icon>
+                    </md-button>
+                    </router-link>
                 <h2 class="md-title" style="flex: 1">Bookflix</h2>
                 <md-button>Login</md-button>
             </md-toolbar>
@@ -29,4 +31,13 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+ toolbar{
+        background-color: #3F657A;
+    }
+    body{
+        background-color: #e1e0e0;
+    }
+     a {
+        color:  white;
+    }
 </style>

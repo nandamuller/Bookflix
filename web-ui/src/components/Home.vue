@@ -48,7 +48,7 @@
                 <md-whiteframe md-tag="section" md-elevation="0">
                     <div style="margin: 15px" >
                         <router-link to="/biblioteca">
-                            <img src="../assets/book3.png" alt="Skyscraper" />
+                            <img src="../assets/book4.png" alt="Skyscraper" />
                             <div class="md-title bkf-card-title" >
                                 <h2>Biblioteca</h2>
                             </div>
@@ -69,15 +69,6 @@
 </script>
 
 <style>
-    toolbar{
-        background-color: #3F657A;
-    }
-    a {
-        color:  white;
-    }
-    body{
-        background-color: #e1e0e0;
-    }
     
     .bkf-card-title {
         position: absolute; 
