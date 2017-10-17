@@ -1,49 +1,25 @@
 <template>
-<md-whiteframe>
-     <md-card>
-  <md-card-header>
-    <md-card-header-text>
-      <div class="md-title">Title goes here</div>
-      <div class="md-subhead">Subtitle here</div>
-    </md-card-header-text>
+    <md-whiteframe>
+        <md-card class="bkf-conheca">
+            <md-card-header>
+                <md-card-header-text>
+                    <div class="md-title">Conheça</div>
+                    <div class="md-subhead">Literatura em pedacinhos.</div>
+                </md-card-header-text>
+            </md-card-header>
 
-    <md-menu md-size="4" md-direction="bottom left">
-      <md-button class="md-icon-button" md-menu-trigger>
-        <md-icon>more_vert</md-icon>
-      </md-button>
+            <md-card-media>
+                <img src="../assets/conheca.jpg" alt="People">
+            </md-card-media>
 
-      <md-menu-content>
-        <md-menu-item>
-          <span>Call</span>
-          <md-icon>phone</md-icon>
-        </md-menu-item>
-
-        <md-menu-item>
-          <span>Send a message</span>
-          <md-icon>message</md-icon>
-        </md-menu-item>
-      </md-menu-content>
-    </md-menu>
-  </md-card-header>
-
-  <md-card-media>
-    <img src="assets/card-image-1.jpg" alt="People">
-  </md-card-media>
-
-  <md-card-content>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-  </md-card-content>
-</md-card>
-
-<md-card>
-  <md-card-media>
-    <img src="assets/card-image-2.jpg" alt="People">
-  </md-card-media>
-
-  <md-card-content>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea nostrum.
-  </md-card-content>
-</md-card>
+            <md-card-content>
+                <div class="txt-bkf-conheca">
+                    A popularização da Internet e a globalização, na sociedade moderna, trouxe novas formas de consumir informações, apesar de todos seus benefícios e adaptações para os tempos modernos, criou-se uma lacuna no desenvolvimento pelo interesse a leitura e consecutivamente diminuiu o número de leitores assim aumentando a defasagem em vários aspectos, tais como interpretação de informações, construção de textos e pensamento crítico.<br>
+                    Tendo como objetivo aumentar o contato com obras literárias e estimular a leitura de obras nacionais, está sendo elaborado um aplicativo que se relacione com o estilo de vida do público alvo e proporcione um contato diário, rápido e prazeroso com as obras, trazendo as leituras em formas de “snacks” se aproximando do modelo das informações recebidas na internet de tempos cá, com o aumento do uso de redes sociais.
+                    Com a estimulação do hábito de ler diariamente, acredita-se despertar os usuário a compreender a importância da leitura e seus benefícios e assim, por fim, levá-lo a ler como atividade de lazer e transformar o modo que se enxerga a leitura, assim diminuindo a lacuna criada no desenvolvimento crítico e cognitivo.
+                </div>
+            </md-card-content>
+        </md-card>
     </md-whiteframe>
 </template>
 
@@ -51,5 +27,13 @@
 </script>
 
 <style>
-
+    .bkf-conheca{
+        margin:150px;
+        margin-top: 0px;
+    }
+    .txt-bkf.conheca{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
 </style>

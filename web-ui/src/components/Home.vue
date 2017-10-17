@@ -77,4 +77,8 @@
         width: 100%;
         font-size: 24px; 
     }
+    
+    .bkf-card-title h2 {
+        text-shadow: 2px 2px 1px #777;
+    }
 </style>
