@@ -8,7 +8,9 @@
                     </md-button>
                     </router-link>
                 <h2 class="md-title" style="flex: 1">Bookflix</h2>
-                <md-button>Login</md-button>
+                    <router-link to="/login">
+                        <md-button>Login</md-button>
+                    </router-link>  
             </md-toolbar>
         </md-whiteframe>
 

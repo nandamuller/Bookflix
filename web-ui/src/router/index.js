@@ -6,6 +6,7 @@ import Cadastre from '@/components/Cadastre'
 import Conheca from '@/components/Conheca'
 import Trecho from '@/components/Trecho'
 import Biblioteca from '@/components/Biblioteca'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ export default new Router({
       path: '/biblioteca',
       name: 'Biblioteca',
       component: Biblioteca
+    },{
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 })

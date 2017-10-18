@@ -6,7 +6,7 @@
                     <div class="md-title">Cadastre</div>
                 </md-card-header-text>
             </md-card-header>
-            <md-card-content>
+            <md-card-content style="min-height: 70vh;">
                 <form novalidate @submit.stop.prevent="submit">
                                 <md-input-container>
                                 <label>Nome</label>

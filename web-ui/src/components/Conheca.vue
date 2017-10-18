@@ -1,6 +1,6 @@
 <template>
     <md-whiteframe>
-        <md-card class="bkf-conheca">
+        <md-card class="bkf-conheca" style="min-height: 70vh;">
             <md-card-header>
                 <md-card-header-text>
                     <div class="md-title">Conheça</div>
