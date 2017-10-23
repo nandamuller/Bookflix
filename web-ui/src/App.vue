@@ -17,7 +17,24 @@
             </md-toolbar>
         </md-whiteframe>
             <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
-                <div>TODO conteúdo aqui :)</div>
+                <md-toolbar>
+                    <div>Menu</div>
+                </md-toolbar>
+                <div>
+                    <router-link to="/home">
+                        <p>Home</p>
+                    </router-link>
+                    <router-link to="/logado">
+                        <p>Trecho</p>
+                    </router-link>
+                    <router-link to="/biblioteca">
+                        <p>Biblioteca</p>
+                    </router-link>
+                    <router-link to="/configuracoes">
+                        <p>Configurações</p>
+                    </router-link>
+                    <p>Sair</p>
+                </div>
         </md-sidenav>
 
         <router-view></router-view>
