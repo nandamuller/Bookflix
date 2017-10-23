@@ -2,7 +2,7 @@
     <div id="app" class="viewport">
         <md-whiteframe md-elevation="3">
             <md-toolbar class="toolbar">
-                <md-button class="md-icon-button">
+                <md-button class="md-icon-button" @click="toggleLeftSidenav">
                     <md-icon>menu</md-icon>
                 </md-button>
                 <router-link to="/home">
@@ -16,15 +16,29 @@
                 </router-link> 
             </md-toolbar>
         </md-whiteframe>
+            <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
+                <div>TODO conteúdo aqui :)</div>
+        </md-sidenav>
 
         <router-view></router-view>
     </div>
 </template>
 
-<script>
+<script>    
 export default {
-  name: 'app'
-}
+    name: 'app',
+    methods: {
+        toggleLeftSidenav() {
+            this.$refs.leftSidenav.toggle();
+        },
+        open(ref) {
+            console.log('Opened: ' + ref);
+        },
+        close(ref) {
+            console.log('Closed: ' + ref);
+        }
+    }
+};
 </script>
 
 <style>
