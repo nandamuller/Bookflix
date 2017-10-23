@@ -7,6 +7,8 @@ import Conheca from '@/components/Conheca'
 import Trecho from '@/components/Trecho'
 import Biblioteca from '@/components/Biblioteca'
 import Login from '@/components/Login'
+import Logado from '@/components/Logado' 
+import Configuracoes from '@/components/Configuracoes'
 
 Vue.use(Router)
 
@@ -40,6 +42,14 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    }, {
+      path: '/logado',
+      name: 'logado',
+      component: Logado
+    }, {
+      path: '/configuracoes',
+      name: 'configuracoes',
+      component: Configuracoes
     }
   ]
 })
