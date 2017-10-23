@@ -2,6 +2,12 @@
     <md-layout md-gutter>
                 <div class="trecho-bkf">
                     <md-card md-elevation="0">
+                         <md-card-header>
+                            <md-card-header-text>
+                                <div class="md-title"><h1>Trecho do Dia</h1></div>
+                            </md-card-header-text>
+                        </md-card-header>
+
                           <md-card-content style="min-height: 70vh;">
                             "Ao vencido, ódio ou compaixão;<br>
                               ao vencedor, as batatas."
