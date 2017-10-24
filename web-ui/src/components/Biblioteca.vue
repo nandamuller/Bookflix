@@ -3,9 +3,12 @@
         <md-card class="bkf-conheca" style="min-height: 70vh;">
             <md-card-header>
                 <md-card-header-text>
-                    <div><md-chip md-deletable></md-chip>
-                        <md-chip md-deletable></md-chip>
-                        <md-chip md-deletable></md-chip></div>
+                        <md-bottom-bar style='height: 0px;'>
+                            <md-button class="md-icon-button">
+                                <md-icon>search</md-icon>
+                            </md-button>
+                                <md-chip md-editable style="flex: 1"></md-chip>
+                        </md-bottom-bar >
                 </md-card-header-text>
             </md-card-header>
 
