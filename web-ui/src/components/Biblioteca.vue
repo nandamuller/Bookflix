@@ -1,6 +1,6 @@
 <template>
     <md-whiteframe>
-        <md-card class="bkf-conheca" style="min-height: 30vh;">
+        <md-card class="bkf-conheca" style="min-height: 70vh;">
             <md-card-header>
                 <md-card-header-text>
                         <md-bottom-bar style='height: 0px;'>
@@ -14,7 +14,7 @@
                 <div class="bkf-header">
                     <h1>Conheça nossa Biblioteca</h1>
                 </div>
-                <div class="bkf-biblioteca" style="min-height: 30vh;">  
+                <div class="bkf-biblioteca" style="min-height: 70vh;">  
                 <md-boards :md-auto="true" :md-infinite="true" :md-duration="5000" :md-swipeable="true">
                   <md-board id="slide1">
                     <p>"Ao vencido, ódio ou compaixão;<br>
@@ -31,11 +31,6 @@
                               ao vencedor, as batatas."</p>
                   </md-board>
                 </md-boards>
-            </div>
-            <div>
-                <md-chip md-deletable>Quincas Borba</md-chip>
-                <md-chip md-deletable>Ficção</md-chip>
-                <md-chip md-deletable>Livraria Garnier</md-chip>
             </div>
         </md-card>
     </md-whiteframe>
@@ -54,7 +49,7 @@
         line-height: 40px;
     }
     .bkf-biblioteca{
-        margin-top: 45px;
+        margin-top: 100px;
     }
     .bkf-header{
         margin-top: 75px;
