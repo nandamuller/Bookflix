@@ -31,7 +31,7 @@ export default new Router({
       name: 'Cadastre',
       component: Cadastre
     }, {
-      path: '/trecho',
+      path: '/trecho/:id',
       name: 'Trecho',
       component: Trecho
     }, {

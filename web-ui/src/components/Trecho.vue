@@ -40,8 +40,29 @@
 </template>
 
 <script>
+    import axios from 'axios'
+    
  export default {
+     name: 'Trecho',
+     
+     data() {
+         return {
+             trecho: {}
+         }
+     },
+     
+     created() {
+       this.buscarDados();  
+     },
+     
+     watch: {
+         '$route': 'buscarDados'
+     },
+     
   methods: {
+      buscarDados() {
+          debugger;
+      },
     openDialog(ref) {
       this.$refs[ref].open();
     },
