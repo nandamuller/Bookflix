@@ -42,9 +42,7 @@
 <script>
     import axios from 'axios'
     
- export default {
-     name: 'Trecho',
-     
+ export default {     
      data() {
          return {
              trecho: {}
@@ -61,7 +59,8 @@
      
   methods: {
       buscarDados() {
-          debugger;
+          console.log(this.$route.params);
+          //debugger;
       },
     openDialog(ref) {
       this.$refs[ref].open();

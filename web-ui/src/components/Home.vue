@@ -18,7 +18,7 @@
             <md-layout md-flex-xsmall="50">
                 <md-whiteframe md-tag="section" md-elevation="0">
                     <div style="margin: 15px" >
-                        <router-link to="/trecho">
+                        <router-link to="/trecho/trecho-do-dia">
                             <img src="../assets/book.png" alt="Skyscraper" />
                             <div class="md-title bkf-card-title" >
                                 <h2>Trecho do Dia</h2>
