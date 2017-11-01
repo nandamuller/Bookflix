@@ -42,7 +42,9 @@
 <script>
     import axios from 'axios'
     
- export default {     
+ export default { 
+     name: 'Trecho', 
+     
      data() {
          return {
              trecho: {}

@@ -1,9 +1,13 @@
 <template>
-<Trecho></Trecho>
+<Trecho :id="trecho"></Trecho>
 </template>
 
 <script>
+    import Trecho from '@/components/Trecho'
+    
  export default {
+     name: 'Logado',
+     
   methods: {
     openDialog(ref) {
       this.$refs[ref].open();
