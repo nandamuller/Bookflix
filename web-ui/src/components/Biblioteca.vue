@@ -39,7 +39,7 @@
             </div>
         </md-card>
         
-        <bkf-trecho :id="idTrecho"></bkf-trecho>
+        <bkf-trecho id="um-valor"></bkf-trecho>
     </md-whiteframe>
 </template>
 

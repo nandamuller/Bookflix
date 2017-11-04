@@ -44,6 +44,8 @@
     
  export default { 
      name: 'Trecho', 
+
+     props: ['id'],
      
      data() {
          return {
@@ -53,6 +55,7 @@
      },
      
      created() {
+         console.log(this.id);
        this.buscarDados();  
      },
      
