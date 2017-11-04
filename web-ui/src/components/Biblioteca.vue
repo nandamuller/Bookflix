@@ -38,16 +38,31 @@
                 <md-chip md-deletable>Livraria Garnier</md-chip>
             </div>
         </md-card>
+        
+        <Trecho :id="idTrecho"></Trecho>
     </md-whiteframe>
 </template>
 
 <script>
+    import Trecho from '@/components/Trecho'
+    
+    export default {
+        
+        components: {
+            Trecho
+        },
+        
+        data() {
+            return {
+                idTrecho: 'meu-valor',            
+            }
+        }
+    }
 </script>
 
 <style>
     .bkf-conheca{
-        margin:150px;
-        margin-top: 0px;
+        margin: 0 150px;
     }
     .txt-bkf.conheca{
         font-size: 20px;
