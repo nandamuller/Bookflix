@@ -39,12 +39,13 @@
             </div>
         </md-card>
         
-        <bkf-trecho id="um-valor"></bkf-trecho>
+        <bkf-trecho v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
     </md-whiteframe>
 </template>
 
 <script>
     import Trecho from '@/components/Trecho'
+    import axios from 'axios'
     
     export default {
         
@@ -54,7 +55,27 @@
         
         data() {
             return {
-                idTrecho: 'meu-valor',            
+                trechos: []
+            }
+        },
+        
+        created() {
+            console.log(this.id);
+            this.buscarDados();  
+        },
+
+        methods: {
+            buscarDados() {
+                axios.get('http://localhost:9000/trechos')
+                    .then((resp) => {
+                        this.erro = false;
+                        this.trechos = resp.data._embedded.trechos;
+                        console.log(resp)
+                    })
+                    .catch((err) => {
+                        this.erro = true;
+                        console.log(err)
+                    });
             }
         }
     }

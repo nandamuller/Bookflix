@@ -4,10 +4,9 @@ import Hello from '@/components/Hello'
 import Home from '@/components/Home'
 import Cadastre from '@/components/Cadastre'
 import Conheca from '@/components/Conheca'
-import Trecho from '@/components/Trecho'
+import TrechoDoDia from '@/components/TrechoDoDia'
 import Biblioteca from '@/components/Biblioteca'
 import Login from '@/components/Login'
-import Logado from '@/components/Logado' 
 import Configuracoes from '@/components/Configuracoes'
 
 Vue.use(Router)
@@ -31,9 +30,9 @@ export default new Router({
       name: 'Cadastre',
       component: Cadastre
     }, {
-      path: '/trecho/:id',
-      name: 'Trecho',
-      component: Trecho
+      path: '/trecho-do-dia',
+      name: 'TrechoDoDia',
+      component: TrechoDoDia
     }, {
       path: '/biblioteca',
       name: 'Biblioteca',
@@ -42,10 +41,6 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
-    }, {
-      path: '/logado',
-      name: 'logado',
-      component: Logado
     }, {
       path: '/configuracoes',
       name: 'configuracoes',
