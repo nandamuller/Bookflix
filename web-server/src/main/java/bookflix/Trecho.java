@@ -1,5 +1,6 @@
 package bookflix;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,14 +12,17 @@ public class Trecho {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	@Column( columnDefinition = "TEXT" )
 	private String conteudo;
 	private String autor;
+	private String obra;
 	
 	protected Trecho() {}
 	
-	public Trecho(String conteudo, String autor) {
+	public Trecho(String conteudo, String autor, String obra) {
 		this.conteudo = conteudo;
 		this.autor = autor;
+		this.obra = obra;
 	}
 	
 	public String getConteudo() {
@@ -33,5 +37,10 @@ public class Trecho {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-
+	public String getObra() {
+		return obra;
+	}
+	public void setObra(String obra) {
+		this.obra = obra;
+	}
 }
