@@ -39,7 +39,7 @@
             </div>
         </md-card>
         
-        <Trecho :id="idTrecho"></Trecho>
+        <bkf-trecho :id="idTrecho"></bkf-trecho>
     </md-whiteframe>
 </template>
 
@@ -49,7 +49,7 @@
     export default {
         
         components: {
-            Trecho
+            'bkf-trecho': Trecho
         },
         
         data() {
