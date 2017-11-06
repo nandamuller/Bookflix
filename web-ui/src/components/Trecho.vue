@@ -1,12 +1,6 @@
 <template>    
     <div class="trecho-bkf">
         <md-card md-elevation="0">
-             <md-card-header>
-                <md-card-header-text>
-                    <div class="md-title"><h1>Trecho do Dia</h1></div>
-                </md-card-header-text>
-            </md-card-header>
-
               <md-card-content style="min-height: 70vh;">
                   <div>"{{ trecho.conteudo }}"</div>
               </md-card-content>
@@ -20,14 +14,8 @@
             <md-dialog md-open-from="#custom" md-close-to="#custom" ref="dialog1">
                 <md-dialog-title>Informações Extras</md-dialog-title>
                 <md-dialog-content><p>
-                                Quincas Borba é um romance escrito por Machado de Assis, desenvolvido em princípio como folhetim na revista A Estação, entre os anos de 1886 e 1891 para, em 1892, ser publicado definitivamente pela Livraria Garnier.<br>
-                                Data da primeira publicação: 1891<br>
                                 Autor: {{ trecho.autor }}<br>
                                 Obra: {{ trecho.obra }}<br>
-                                Idioma original: Língua portuguesa<br>
-                                Gênero: Ficção<br>
-                                Editora: Livraria Garnier (primeira edição)<br>
-                                País: Brasil
                             </p></md-dialog-content>
                 <md-dialog-actions>
                     <md-button class="md-primary" @click="closeDialog('dialog1')">Ok</md-button>
@@ -72,7 +60,6 @@
 
 <style>
     .trecho-bkf{
-        margin: 150px;
         margin-top: 0px;
         text-align: center; 
         width: 100%;

@@ -1,8 +1,13 @@
 <template>
-    <md-layout md-gutter>
-        <bkf-trecho :trecho="trecho" v-show="!erro"></bkf-trecho>
-        <div class="falha" v-show="erro">Houve um erro. Por favor tente novamente mais tarde.</div>
-    </md-layout>
+    <md-whiteframe>
+        <div class="md-title"><h1>Trecho do Dia</h1></div>
+        <md-card class="trecho-bkf">
+            <md-layout>
+                <bkf-trecho :trecho="trecho" v-if="trecho != null"></bkf-trecho>
+                <div class="falha" v-else>Houve um erro. Por favor tente novamente mais tarde.</div>
+            </md-layout>
+        </md-card>
+    </md-whiteframe>
 </template>
 
 <script>
@@ -14,8 +19,7 @@
      
      data() {
          return {
-             trecho: null,
-             erro: false
+             trecho: null
          }
      },
      
@@ -34,12 +38,10 @@
           // TODO tornar esse trecho variavel a cada dia
           axios.get('http://localhost:9000/trechos/1')
             .then((resp) => {
-              this.erro = false;
               this.trecho = resp.data
               console.log(resp)
             })
             .catch((err) => {
-              this.erro = true;
               console.log(err)
             });
       }
@@ -48,4 +50,9 @@
 </script>
 
 <style>
+     .trecho-bkf{
+        text-align: center; 
+        width: 100%;
+        font-size: 24px; 
+    }
 </style>
