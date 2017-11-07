@@ -16,7 +16,7 @@
                     <router-link to="/home">
                         <p>Home</p>
                     </router-link>
-                    <router-link to="/trecho/seu-trecho">
+                    <router-link to="/trecho-do-dia">
                         <p>Trecho</p>
                     </router-link>
                     <router-link to="/biblioteca">

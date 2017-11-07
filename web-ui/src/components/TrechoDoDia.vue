@@ -1,7 +1,7 @@
 <template>
     <md-whiteframe>
-        <div class="md-title"><h1>Trecho do Dia</h1></div>
         <md-card class="trecho-bkf">
+            <div class="md-title"><h1>Trecho do Dia</h1></div>
             <md-layout>
                 <bkf-trecho :trecho="trecho" v-if="trecho != null"></bkf-trecho>
                 <div class="falha" v-else>Houve um erro. Por favor tente novamente mais tarde.</div>

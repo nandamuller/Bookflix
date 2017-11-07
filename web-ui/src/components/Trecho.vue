@@ -59,8 +59,7 @@
 </script>
 
 <style>
-    .trecho-bkf{
-        margin-top: 0px;
+    trecho-bkf{
         text-align: center; 
         width: 100%;
         font-size: 24px; 

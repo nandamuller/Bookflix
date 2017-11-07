@@ -12,7 +12,7 @@
                 </md-card-header-text>
             </md-card-header>
                 <div class="bkf-header">
-                    <h1>Conheça nossa Biblioteca</h1>
+                    <h1>Sua Pesquisa</h1>
                 </div>
                 <div class="bkf-biblioteca" style="min-height: 30vh;">  
                 <md-boards :md-auto="true" :md-infinite="true" :md-duration="5000" :md-swipeable="true">
@@ -39,7 +39,10 @@
             </div>
         </md-card>
         
-        <bkf-trecho v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
+        <div class="bkf-header">
+            <h1>Conheça a Biblioteca</h1>
+        </div>
+        <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
     </md-whiteframe>
 </template>
 
