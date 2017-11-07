@@ -6,9 +6,6 @@
                     <md-icon>menu</md-icon>
                 </md-button>
                 <h2 class="md-title" style="flex: 1">Bookflix</h2>
-                <router-link to="/login">
-                    <md-button>Login</md-button>
-                </router-link> 
             </md-toolbar>
         </md-whiteframe>
             <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">

@@ -6,7 +6,6 @@ import Cadastre from '@/components/Cadastre'
 import Conheca from '@/components/Conheca'
 import TrechoDoDia from '@/components/TrechoDoDia'
 import Biblioteca from '@/components/Biblioteca'
-import Login from '@/components/Login'
 import Configuracoes from '@/components/Configuracoes'
 
 Vue.use(Router)
@@ -37,10 +36,6 @@ export default new Router({
       path: '/biblioteca',
       name: 'Biblioteca',
       component: Biblioteca
-    },{
-      path: '/login',
-      name: 'login',
-      component: Login
     }, {
       path: '/configuracoes',
       name: 'configuracoes',
