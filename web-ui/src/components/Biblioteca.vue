@@ -100,7 +100,7 @@
 
 <style>
     .bkf-conheca{
-        margin: 0 20px;
+        margin: 20px;
     }
     .txt-bkf.conheca{
         font-size: 20px;
@@ -110,7 +110,7 @@
         margin-top: 45px;
     }
     .bkf-header{
-        margin-top: 75px;
+        margin-top: 20px;
     }
     
 </style>
