@@ -1,7 +1,7 @@
 <template>    
     <div class="trecho-bkf">
         <md-card md-elevation="0">
-              <md-card-content style="min-height: 70vh;">
+              <md-card-content>
                   <div>"{{ trecho.conteudo }}"</div>
               </md-card-content>
         </md-card>

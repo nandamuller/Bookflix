@@ -42,8 +42,22 @@
         <div class="bkf-header">
             <h1>Conheça a Biblioteca</h1>
         </div>
-        <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
-    </md-whiteframe>
+    <md-layout style="margin: 20px;">
+        <md-layout md-gutter="8">
+            <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
+                <md-whiteframe>
+                    <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
+                </md-whiteframe>
+            </md-layout>
+
+            <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
+                <md-whiteframe>
+                    <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
+                </md-whiteframe>
+            </md-layout>
+        </md-layout>
+    </md-layout>
+</md-whiteframe>
 </template>
 
 <script>
@@ -86,7 +100,7 @@
 
 <style>
     .bkf-conheca{
-        margin: 0 150px;
+        margin: 0 20px;
     }
     .txt-bkf.conheca{
         font-size: 20px;
