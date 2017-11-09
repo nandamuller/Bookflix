@@ -17,9 +17,11 @@
                             <input type="password"><span class="highlight"></span><span class="bar"></span>
                             <label>Senha</label>
                         </div>
-                          <button type="button" class="button buttonBlue">Entre
-                            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                          </button>
+                        <router-link to="/cadastro-trecho">
+                            <button type="button" class="button buttonBlue">Entre
+                                <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                            </button>
+                        </router-link>
                         </form>
             </md-card-content>
         </md-card>
