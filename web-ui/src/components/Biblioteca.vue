@@ -46,13 +46,18 @@
         <md-layout md-gutter="8">
             <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
                 <md-whiteframe>
+                     <div class="bkf-header"><h2>Trechos</h2></div>
                     <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
                 </md-whiteframe>
             </md-layout>
-
             <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
                 <md-whiteframe>
-                    <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
+                     <div class="bkf-header"><h2>Autores</h2></div>
+                </md-whiteframe>
+            </md-layout>
+             <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
+                <md-whiteframe>
+                     <div class="bkf-header"><h2>Obras</h2></div>
                 </md-whiteframe>
             </md-layout>
         </md-layout>
@@ -107,10 +112,10 @@
         line-height: 40px;
     }
     .bkf-biblioteca{
-        margin-top: 45px;
+        margin-top: 40px;
     }
     .bkf-header{
-        margin-top: 20px;
+        margin: 40px;
     }
     
 </style>
