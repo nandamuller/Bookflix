@@ -10,8 +10,8 @@
             <md-card-content>
                     <form>
                         <div class="group">
-                            <input type="email"><span class="highlight"></span><span class="bar"></span>
-                            <label>Email</label>
+                            <input type="name"><span class="highlight"></span><span class="bar"></span>
+                            <label>User</label>
                         </div>
                         <div class="group">
                             <input type="password"><span class="highlight"></span><span class="bar"></span>
