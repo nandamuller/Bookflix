@@ -29,22 +29,7 @@
             </md-layout>
         </md-layout>
 
-        <md-layout md-gutter="25">
-            <md-layout md-flex-xsmall="50">
-                <md-whiteframe md-tag="section" md-elevation="0">
-                    <div style="margin: 15px;">
-                        <router-link to="/cadastre">
-                            <img src="../assets/book3.png" alt="Skyscraper" />
-                            <div class="md-title bkf-card-title" >
-                                <h2>Cadastre-se</h2>
-                            </div>
-                        </router-link>
-                    </div>
-                </md-whiteframe>
-            </md-layout >
-
-
-            <md-layout md-flex-xsmall="50">
+            <md-layout md-flex-xsmall="50" class="bkf-bilb">
                 <md-whiteframe md-tag="section" md-elevation="0">
                     <div style="margin: 15px" >
                         <router-link to="/biblioteca">
@@ -56,9 +41,7 @@
                     </div>
                 </md-whiteframe>
             </md-layout>
-        </md-layout>
-
-
+        
     </md-whiteframe>    
 </template>
 
@@ -69,7 +52,8 @@
 </script>
 
 <style>
-    
+    .bkf-bilb{
+    }
     .bkf-card-title {
         position: absolute; 
         top: 150px; 
