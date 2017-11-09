@@ -54,7 +54,7 @@
 <style>
     .trecho-do-dia{
         margin: 20px; 
-        min-height: 70vh;"
+        min-height: 70vh;
     }
      .trecho-bkf{
         text-align: center; 
