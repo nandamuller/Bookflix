@@ -8,6 +8,8 @@ import TrechoDoDia from '@/components/TrechoDoDia'
 import Biblioteca from '@/components/Biblioteca'
 import Configuracoes from '@/components/Configuracoes'
 import Login from '@/components/Login'
+import CadastroTrecho from '@/components/CadastroTrecho'
+
 
 Vue.use(Router)
 
@@ -45,6 +47,10 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    }, {
+      path: '/cadastro-trecho',
+      name: 'CadastroTrecho',
+      component: CadastroTrecho
     }
   ]
 })
