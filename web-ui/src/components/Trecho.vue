@@ -8,7 +8,6 @@
         <div class="trechobar-bkf" md-gutter>
             <md-bottom-bar>
                   <md-bottom-bar-item md-icon="info outline"@click="openDialog('dialog1')">Info</md-bottom-bar-item>
-                  <md-bottom-bar-item md-icon="favorite">Favoritos</md-bottom-bar-item>
                   <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
             </md-bottom-bar>
             <md-dialog md-open-from="#custom" md-close-to="#custom" ref="dialog1">
