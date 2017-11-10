@@ -22,10 +22,6 @@
                     <router-link to="/biblioteca">
                         <p>Biblioteca</p>
                     </router-link>
-                    <router-link to="/configuracoes">
-                        <p>Configurações</p>
-                    </router-link>
-                    <p>Sair</p>
                 </div>
         </md-sidenav>
 
