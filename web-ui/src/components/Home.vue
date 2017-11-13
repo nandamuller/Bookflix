@@ -15,7 +15,7 @@
             </md-layout >
 
 
-            <md-layout md-flex-xsmall="50">
+            <md-layout md-flex-xsmall="50" md-flex-small="100" md-flex-medium="100">
                 <md-whiteframe md-tag="section" md-elevation="0">
                     <div style="margin: 15px" >
                         <router-link to="/trecho-do-dia">
