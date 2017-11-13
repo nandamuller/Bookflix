@@ -28,8 +28,7 @@
 
 <style>
     .bkf-conheca{
-        margin:150px;
-        margin-top: 0px;
+        margin:20px;
     }
     .txt-bkf.conheca{
         font-size: 20px;
