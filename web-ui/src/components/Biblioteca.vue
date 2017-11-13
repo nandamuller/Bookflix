@@ -4,11 +4,14 @@
             <md-card-header>
                 <md-card-header-text>
                         <md-bottom-bar style='height: 0px;'>
+                             <md-input-container md-clearable>
+                                <label>Pesquise</label>
+                                <md-input v-model="initialValue"></md-input>
+                            </md-input-container>
                             <md-button class="md-icon-button">
                                 <md-icon>search</md-icon>
                             </md-button>
-                                <md-chip md-editable style="flex: 1"></md-chip>
-                        </md-bottom-bar >
+                        </md-bottom-bar>
                 </md-card-header-text>
             </md-card-header>
                 <div class="bkf-header">
