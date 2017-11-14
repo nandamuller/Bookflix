@@ -5,22 +5,6 @@
                   <div>"{{ trecho.conteudo }}"</div>
               </md-card-content>
         </md-card>
-        <div class="trechobar-bkf" md-gutter>
-            <md-bottom-bar>
-                  <md-bottom-bar-item md-icon="info outline"@click="openDialog('dialog1')">Info</md-bottom-bar-item>
-                  <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
-            </md-bottom-bar>
-            <md-dialog md-open-from="#custom" md-close-to="#custom" ref="dialog1">
-                <md-dialog-title>Informações Extras</md-dialog-title>
-                <md-dialog-content><p>
-                                Autor: {{ trecho.autor }}<br>
-                                Obra: {{ trecho.obra }}<br>
-                            </p></md-dialog-content>
-                <md-dialog-actions>
-                    <md-button class="md-primary" @click="closeDialog('dialog1')">Ok</md-button>
-                </md-dialog-actions>
-            </md-dialog>                    
-        </div>
     </div>
 </template>
 
