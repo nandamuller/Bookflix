@@ -9,7 +9,7 @@ import Biblioteca from '@/components/Biblioteca'
 import Configuracoes from '@/components/Configuracoes'
 import Login from '@/components/Login'
 import CadastroTrecho from '@/components/CadastroTrecho'
-
+import Autor from '@/components/Autor'
 
 Vue.use(Router)
 
@@ -51,6 +51,10 @@ export default new Router({
       path: '/cadastro-trecho',
       name: 'CadastroTrecho',
       component: CadastroTrecho
+    }, {
+      path: '/autor',
+      name: 'Autor',
+      component: Autor
     }
   ]
 })
