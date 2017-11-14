@@ -1,10 +1,14 @@
 package bookflix;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -21,6 +25,9 @@ public class Obra {
 	@JsonIgnore
 	@ManyToOne
 	private Autor autor;
+	
+	@OneToMany (mappedBy = "obra")
+	private Set<Trecho> trechos = new HashSet<Trecho>();
 
 	public Obra(String titulo, Autor autor) {
 		this.titulo = titulo;

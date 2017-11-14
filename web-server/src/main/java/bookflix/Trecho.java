@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Trecho {
@@ -15,11 +18,14 @@ public class Trecho {
 	@Column( columnDefinition = "TEXT" )
 	private String conteudo;
 	private String autor;
-	private String obra;
+	
+	@JsonIgnore
+	@ManyToOne
+	private Obra obra;
 	
 	protected Trecho() {}
 	
-	public Trecho(String conteudo, String autor, String obra) {
+	public Trecho(String conteudo, String autor, Obra obra) {
 		this.conteudo = conteudo;
 		this.autor = autor;
 		this.obra = obra;
@@ -28,19 +34,24 @@ public class Trecho {
 	public String getConteudo() {
 		return conteudo;
 	}
+
 	public void setConteudo(String conteudo) {
 		this.conteudo = conteudo;
 	}
+	
 	public String getAutor() {
 		return autor;
 	}
+	
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	public String getObra() {
+	
+	public Obra getObra() {
 		return obra;
 	}
-	public void setObra(String obra) {
+	
+	public void setObra(Obra obra) {
 		this.obra = obra;
 	}
 }
