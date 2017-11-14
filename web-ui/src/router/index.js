@@ -10,6 +10,7 @@ import Configuracoes from '@/components/Configuracoes'
 import Login from '@/components/Login'
 import CadastroTrecho from '@/components/CadastroTrecho'
 import Autor from '@/components/Autor'
+import Obra from '@/components/Obra'
 
 Vue.use(Router)
 
@@ -55,6 +56,10 @@ export default new Router({
       path: '/autor',
       name: 'Autor',
       component: Autor
+    }, {
+      path: '/obra',
+      name: 'Obra',
+      component: Obra
     }
   ]
 })
