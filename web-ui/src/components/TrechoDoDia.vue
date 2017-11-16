@@ -63,7 +63,6 @@
               console.log(err)
             })
       },
-        
         openDialog(ref) {
           this.$refs[ref].open();
         },
