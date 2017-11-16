@@ -11,6 +11,7 @@ import Login from '@/components/Login'
 import CadastroTrecho from '@/components/CadastroTrecho'
 import Autor from '@/components/Autor'
 import Obra from '@/components/Obra'
+import TrechoInf from '@/components/TrechoInf'
 
 Vue.use(Router)
 
@@ -60,6 +61,10 @@ export default new Router({
       path: '/obra',
       name: 'Obra',
       component: Obra
+    }, {
+      path: '/trecho-info',
+      name: 'TrechoInf',
+      component: TrechoInf
     }
   ]
 })
