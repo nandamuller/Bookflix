@@ -1,9 +1,9 @@
 <template>
     <md-whiteframe>
-        <md-card class="bkf-conheca" style="min-height: 30vh;">
-            <md-card-header>
-                <md-card-header-text>
-                        <md-bottom-bar style='height: 0px;'>
+        <md-card class="bkf-conheca">
+            <div class="bkf-header">
+                    <h1>Sua Pesquisa</h1>
+                        <md-bottom-bar>
                              <md-input-container md-clearable>
                                 <label>Pesquise</label>
                                 <md-input></md-input>
@@ -12,11 +12,10 @@
                                 <md-icon>search</md-icon>
                             </md-button>
                         </md-bottom-bar>
-                </md-card-header-text>
-            </md-card-header>
-                <div class="bkf-header">
-                    <h1>Sua Pesquisa</h1>
                 </div>
+            </md-card>
+        
+             <md-card class="bkf-conheca" style="min-height: 30vh;">
                 <div class="bkf-biblioteca" style="min-height: 30vh;">  
                 <md-boards :md-auto="true" :md-infinite="true" :md-duration="5000" :md-swipeable="true">
                   <md-board id="slide1">
@@ -35,38 +34,23 @@
                   </md-board>
                 </md-boards>
             </div>
-            <div>
-                <md-chip md-deletable>Quincas Borba</md-chip>
-                <md-chip md-deletable>Ficção</md-chip>
-                <md-chip md-deletable>Livraria Garnier</md-chip>
-            </div>
         </md-card>
         
         <div class="bkf-header">
             <h1>Conheça a Biblioteca</h1>
         </div>
     <md-layout style="margin: 20px;">
-        <md-layout md-gutter="8">
             <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
                 <md-whiteframe>
-                     <div class="bkf-header"><h2>Trechos</h2></div>
-                    <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
-                </md-whiteframe>
-            </md-layout>
-            <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
-                <md-whiteframe>
-                     <div class="bkf-header"><h2>Autores</h2></div>
-                    <bkf-autor class="bkf-biblioteca" v-for="autor in autores"  :key="autor.id" :autor="autor"></bkf-autor>
-                </md-whiteframe>
-            </md-layout>
-             <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
-                <md-whiteframe>
-                     <div class="bkf-header"><h2>Obras</h2></div>
-                    <bkf-obra class="bkf-biblioteca" v-for="obra in obras"  :key="obra.id" :obra="obra"></bkf-obra>
+                    <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
+                        <md-whiteframe>
+                            <div class="bkf-header"><h2>Trechos</h2></div>
+                            <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
+                        </md-whiteframe>
+                    </md-layout>
                 </md-whiteframe>
             </md-layout>
         </md-layout>
-    </md-layout>
 </md-whiteframe>
 </template>
 
@@ -82,8 +66,7 @@
             'bkf-trecho': Trecho,
             'bkf-autor': Autor,
             'bkf-obra': Obra
-        },
-        
+        }, 
         data() {
             return {
                 trechos: [],
