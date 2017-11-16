@@ -2,10 +2,20 @@
     <div class="trecho-bkf">
         <md-card md-elevation="0">
               <md-card-content>
-                  <div>"{{ trecho.conteudo }}"</div>
+                  <div>"{{ trecho.conteudo }}"<br>
+                      {{ trecho.autor }} em {{ trecho.obra }}
+                </div>
               </md-card-content>
-        </md-card>
-    </div>
+                <div class="trechobar-bkf" md-gutter>
+                    <md-bottom-bar>
+                        <router-link to="/trecho-info">
+                            <md-bottom-bar-item md-icon="info outline">Info</md-bottom-bar-item>
+                        </router-link>  
+                        <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
+                    </md-bottom-bar>                    
+                </div>
+            </md-card>
+        </div>
 </template>
 
 <script>
@@ -25,18 +35,6 @@
      },
      
   methods: {
-    openDialog(ref) {
-      this.$refs[ref].open();
-    },
-    closeDialog(ref) {
-      this.$refs[ref].close();
-    },
-    onOpen() {
-      console.log('Opened');
-    },
-    onClose(type) {
-      console.log('Closed', type);
-    }
   }
 };
 </script>
