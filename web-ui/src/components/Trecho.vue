@@ -9,7 +9,7 @@
                 <div class="trechobar-bkf" md-gutter>
                     <md-bottom-bar>
                         <router-link to="/trecho-info">
-                            <md-bottom-bar-item md-icon="info outline">Info</md-bottom-bar-item>
+                            <md-bottom-bar-item md-icon="info outline" router-link to="/trecho-info">Info</md-bottom-bar-item>
                         </router-link>  
                         <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
                     </md-bottom-bar>                    
