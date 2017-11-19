@@ -56,22 +56,16 @@
 
 <script>
     import Trecho from '@/components/Trecho'
-    import Autor from '@/components/Autor'
-    import Obra from '@/components/Obra'
     import axios from 'axios'
     
     export default {
         
         components: {
-            'bkf-trecho': Trecho,
-            'bkf-autor': Autor,
-            'bkf-obra': Obra
+            'bkf-trecho': Trecho
         }, 
         data() {
             return {
-                trechos: [],
-                autores: [],
-                obras:[]
+                trechos: []
             }
         },
         
@@ -91,22 +85,6 @@
                     .catch((err) => {
                         this.erro = true;
                         console.log(err)
-                    });
-                axios.get('http://localhost:9000/autores')
-                    .then((resp) => {
-                        this.erro = false;
-                        this.autores = resp.data._embedded.autores;
-                        console.log(resp)
-                    })
-                    .catch((err) => {
-                        this.erro = true;
-                        console.log(err)
-                    });
-                axios.get('http://localhost:9000/obras')
-                    .then((resp) => {
-                        this.erro = false;
-                        this.obras = resp.data._embedded.obras;
-                        console.log(resp)
                     })
                     .catch((err) => {
                         this.erro = true;
