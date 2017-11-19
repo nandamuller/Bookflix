@@ -52,10 +52,6 @@
 </script>
 
 <style>
-    .trecho-do-dia{
-        margin: 20px; 
-        min-height: 70vh;
-    }
      .trecho-bkf{
         text-align: center; 
         width: 100%;
