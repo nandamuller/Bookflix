@@ -24,7 +24,7 @@
                   </md-board>
 
                   <md-board id="slide2">
-                    <p>"Ao vencido, ódio ou compaixão;<br>
+                      <p>"Ao vencido, ódio ou compaixão;<br>
                               ao vencedor, as batatas."</p>
                   </md-board>
 
