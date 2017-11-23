@@ -8,8 +8,9 @@
               </md-card-content>
                 <div class="trechobar-bkf" md-gutter>
                     <md-bottom-bar>
-                        <router-link to="/trecho-info">
-                            <md-bottom-bar-item md-icon="info outline" router-link to="/trecho-info">Info</md-bottom-bar-item>
+                        <!-- TODO corrigir isto aqui que esta gerando erros: os itens devem estar diretamente dentro da barra e nao dentro do link -->
+                        <router-link v-bind:to="url()">
+                            <md-bottom-bar-item md-icon="info outline">Info</md-bottom-bar-item>
                         </router-link>  
                         <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
                     </md-bottom-bar>                    
@@ -34,8 +35,12 @@
          console.log(this.trecho.id);
      },
      
-  methods: {
-  }
+    methods: {
+        url() {
+            // debugger;
+            return '/trechos/' + this.trecho.id;
+        }
+    }
 };
 </script>
 
