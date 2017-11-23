@@ -7,6 +7,10 @@
                              <md-input-container md-clearable>
                                 <label>Pesquise</label>
                                 <md-input></md-input>
+                                 <!-- TODO encontrar como faz para saber o que foi digitado no md-input e utilizar o texto para a pesquisa abaixo (da mesma maneira que fazemos com os trechos ao carregar este componente, com o axios) -->
+                                 <!-- /autores/search/findByNomeContainingIgnoreCase?nome=Machado -->
+                                 <!-- /trechos/search/findByConteudoContainingIgnoreCase?conteudo=batata -->
+                                 <!-- criar uma maneira de exibir os resultados -->
                             </md-input-container>
                             <md-button class="md-icon-button">
                                 <md-icon>search</md-icon>
