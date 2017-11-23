@@ -4,7 +4,8 @@
               <md-card-content>
                   <div>"{{ trecho.conteudo }}"<br>
                       {{ trecho.autor }} em {{ trecho.obra }}
-                </div>
+                  </div>
+                  <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_7aix"></div>
               </md-card-content>
                 <div class="trechobar-bkf" md-gutter>
                     <md-bottom-bar>
