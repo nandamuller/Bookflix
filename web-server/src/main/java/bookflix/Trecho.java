@@ -31,6 +31,10 @@ public class Trecho {
 		this.obra = obra;
 	}
 	
+	public long getId() {
+		return id;
+	}
+
 	public String getConteudo() {
 		return conteudo;
 	}

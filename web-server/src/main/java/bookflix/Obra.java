@@ -33,6 +33,10 @@ public class Obra {
 		this.titulo = titulo;
 		this.autor = autor;
 	}
+	
+	public long getId() {
+		return id;
+	}
 
 	public String getTitulo() {
 		return titulo;

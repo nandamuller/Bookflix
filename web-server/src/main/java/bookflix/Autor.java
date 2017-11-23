@@ -21,6 +21,10 @@ public class Autor {
 	
 	protected Autor() {}
 	
+	public long getId() {
+		return id;
+	}
+
 	public Autor(String nome) {
 		this.nome = nome;
 	}
