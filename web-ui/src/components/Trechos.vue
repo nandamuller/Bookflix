@@ -8,12 +8,6 @@
                             <bkf-trecho class="bkf-biblioteca" :key="trecho.id" :trecho="trecho"></bkf-trecho>
                         </trecho>
                     </md-card-content>
-                    
-                <div class="trechobar-bkf" md-gutter>
-                    <md-bottom-bar>
-                        <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
-                    </md-bottom-bar>                    
-                </div>
               
         <md-layout style="margin: 20px;">
             <md-layout md-gutter="8">

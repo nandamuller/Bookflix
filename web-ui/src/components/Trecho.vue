@@ -5,7 +5,6 @@
                   <div>"{{ trecho.conteudo }}"<br>
                       {{ trecho.autor }} em {{ trecho.obra }}
                   </div>
-                  <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_7aix"></div>
               </md-card-content>
                 <div class="trechobar-bkf" md-gutter>
                     <md-bottom-bar>
@@ -13,17 +12,22 @@
                         <router-link v-bind:to="url()">
                             <md-bottom-bar-item md-icon="info outline">Info</md-bottom-bar-item>
                         </router-link>  
-                        <md-bottom-bar-item md-icon="near_me">Compartilhar</md-bottom-bar-item>
-                    </md-bottom-bar>                    
-                </div>
-            </md-card>
-        </div>
+                        <div class="addthis_inline_share_toolbox_7aix"></div>
+                    </md-bottom-bar>
+    </div>
+    </md-card>
+    </div>
+   
 </template>
 
 <script>
     
  export default { 
-     name: 'Trecho', 
+     name: 'DialogCustom',
+    data: () => ({
+      showDialog: false
+    }),
+     name: 'Trecho',
 
      props: {
          trecho: {
@@ -46,6 +50,9 @@
 </script>
 
 <style>
+    .md-dialog {
+    max-width: 768px;
+  }
     trecho-bkf{
         text-align: center; 
         width: 100%;
@@ -54,4 +61,7 @@
     .inf-trecho-bkf{
         font-size: 24px;
     }
+    .md-dialog {
+    max-width: 768px;
+  }
 </style>
