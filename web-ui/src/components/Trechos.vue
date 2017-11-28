@@ -13,14 +13,14 @@
             <md-layout md-gutter="8">
                 <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
                     <md-whiteframe>
-                        <div class="bkf-header"><h2>Mais sobre esse Autor</h2>
+                        <div class="bkf-header"><h2>Mais desse Autor</h2>
                         </div>
                     </md-whiteframe>
                 </md-layout>
                 
                 <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
                     <md-whiteframe>
-                        <div class="bkf-header"><h2>Saiba mais sobre essa Obra</h2>
+                        <div class="bkf-header"><h2>Saiba mais dessa Obra</h2>
                         </div>
                     </md-whiteframe>
                     </md-layout>
