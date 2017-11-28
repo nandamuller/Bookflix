@@ -31,20 +31,6 @@
                 </md-whiteframe>
         </md-layout>
     </md-layout>
-    <md-layout style="margin: 20px;">
-        <md-layout md-gutter="8">
-                <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
-                    <md-whiteframe>
-                         <div class="bkf-header"><h2>Altere</h2></div>
-                    </md-whiteframe>
-                </md-layout>
-                 <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
-                    <md-whiteframe>
-                         <div class="bkf-header"><h2>Exclua</h2></div>
-                    </md-whiteframe>
-                </md-layout>
-            </md-layout>
-        </md-layout>
 </div>
 </template>
 
