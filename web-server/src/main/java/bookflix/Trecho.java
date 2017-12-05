@@ -22,13 +22,16 @@ public class Trecho {
 	@JsonIgnore
 	@ManyToOne
 	private Obra obra;
+
+	private String referencia;
 	
 	protected Trecho() {}
 	
-	public Trecho(String conteudo, String autor, Obra obra) {
+	public Trecho(String conteudo, String autor, Obra obra, String referencia) {
 		this.conteudo = conteudo;
 		this.autor = autor;
 		this.obra = obra;
+		this.setReferencia(referencia);
 	}
 	
 	public long getId() {
@@ -58,4 +61,19 @@ public class Trecho {
 	public void setObra(Obra obra) {
 		this.obra = obra;
 	}
+
+	public String getReferencia() {
+		return referencia;
+	}
+
+	public void setReferencia(String referencia) {
+		this.referencia = referencia;
+	}
+	 @Override
+	    public String toString() {
+	        return "Trecho{" +
+	                "conteudo='" + conteudo + '\'' +
+	                ", id=" + id +
+	                '}';
+	    }
 }

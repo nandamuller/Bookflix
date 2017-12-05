@@ -18,8 +18,6 @@ public class Obra {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	protected Obra() {}
-	
 	private String titulo;
 
 	@JsonIgnore
@@ -29,6 +27,8 @@ public class Obra {
 	@OneToMany (mappedBy = "obra")
 	private Set<Trecho> trechos = new HashSet<Trecho>();
 
+	protected Obra() {}
+	
 	public Obra(String titulo, Autor autor) {
 		this.titulo = titulo;
 		this.autor = autor;
