@@ -3,7 +3,7 @@
         <md-card md-elevation="0">
               <md-card-content>
                   <div>"{{ trecho.conteudo }}"<br>
-                      {{ trecho.autor }} em {{ trecho.obra }}
+                      {{ trecho.autor }} em {{ trecho.obra }} disponível em {{trecho.referencia}}
                   </div>
               </md-card-content>
                 <div class="trechobar-bkf" md-gutter>
