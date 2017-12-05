@@ -6,13 +6,13 @@
                         <md-bottom-bar>
                              <md-input-container md-clearable>
                                 <label>Pesquise</label>
-                                <md-input></md-input>
+                                <md-input type="search"></md-input>
                                  <!-- TODO encontrar como faz para saber o que foi digitado no md-input e utilizar o texto para a pesquisa abaixo (da mesma maneira que fazemos com os trechos ao carregar este componente, com o axios) -->
                                  <!-- /autores/search/findByNomeContainingIgnoreCase?nome=Machado -->
                                  <!-- /trechos/search/findByConteudoContainingIgnoreCase?conteudo=batata -->
                                  <!-- criar uma maneira de exibir os resultados -->
                             </md-input-container>
-                            <md-button class="md-icon-button">
+                            <md-button class="md-icon-button" click="myFunction()">
                                 <md-icon>search</md-icon>
                             </md-button>
                         </md-bottom-bar>
@@ -46,7 +46,7 @@
     <md-layout style="margin: 20px;">
             <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
                 <md-whiteframe>
-                    <md-layout md-column md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100">
+                    <md-layout>
                         <md-whiteframe>
                             <div class="bkf-header"><h2>Trechos</h2></div>
                             <bkf-trecho class="bkf-biblioteca" v-for="trecho in trechos"  :key="trecho.id" :trecho="trecho"></bkf-trecho>
