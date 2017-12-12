@@ -14,39 +14,43 @@
 
 <script>
     import Trecho from '@/components/Trecho'
-    import axios from 'axios'    
-    
- export default { 
-     name: 'TrechoDoDia', 
-     
-     data() {
-         return {
-             trecho: null
-         }
-     },
-     
-     components: {
-         'bkf-trecho': Trecho
-     },
+import axios from 'axios'
 
-     created() {
-         console.log(this.id);
-       this.buscarDados();  
-     },
-     
-  methods: {
-      buscarDados() {
-          // console.log(this.$route.params);
-          // TODO tornar esse trecho variavel a cada dia
-          axios.get('http://localhost:9000/trechos/1')
-            .then((resp) => {
-              this.trecho = resp.data
-              console.log(resp)
-            })
-            .catch((err) => {
-              console.log(err)
-            })
-      }
+export default {
+    name: 'TrechoDoDia',
+
+    data() {
+        return {
+            trecho: null
+        }
+    },
+
+    components: {
+        'bkf-trecho': Trecho
+    },
+
+    created() {
+        console.log(this.id);
+        this.buscarDados();
+    },
+
+    methods: {
+        buscarDados() {
+            var now = new Date();
+            var start = new Date(now.getFullYear(), 0, 0);
+            var diff = now - start;
+            var oneDay = 1000 * 60 * 60 * 24;
+            var day = Math.floor(diff / oneDay);
+            console.log('Day of year: ' + day);
+            axios.get('http://localhost:9000/trechos/' + day)
+                .then((resp) => {
+                    this.trecho = resp.data
+                    console.log(resp)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        }
     }
 };
 </script>

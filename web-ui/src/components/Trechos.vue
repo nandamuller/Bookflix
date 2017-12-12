@@ -15,6 +15,7 @@
                     <md-whiteframe>
                         <div class="bkf-header"><h2>Mais desse Autor</h2>
                         </div>
+                            
                     </md-whiteframe>
                 </md-layout>
                 
@@ -33,7 +34,7 @@
 </template>
 
 <script>
-   import Trecho from '@/components/Trecho'
+    import Trecho from '@/components/Trecho'
     import axios from 'axios'    
     
  export default { 
