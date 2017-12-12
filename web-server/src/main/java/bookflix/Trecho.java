@@ -2,12 +2,13 @@ package bookflix;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 @Entity
 public class Trecho {
@@ -17,19 +18,17 @@ public class Trecho {
 
 	@Column( columnDefinition = "TEXT" )
 	private String conteudo;
-	private String autor;
 	
-	@JsonIgnore
-	@ManyToOne
+	@ManyToOne ( fetch = FetchType.EAGER )
+	@RestResource ( exported = false )
 	private Obra obra;
 
 	private String referencia;
 	
 	protected Trecho() {}
 	
-	public Trecho(String conteudo, String autor, Obra obra, String referencia) {
+	public Trecho(String conteudo, Obra obra, String referencia) {
 		this.conteudo = conteudo;
-		this.autor = autor;
 		this.obra = obra;
 		this.setReferencia(referencia);
 	}
@@ -44,14 +43,6 @@ public class Trecho {
 
 	public void setConteudo(String conteudo) {
 		this.conteudo = conteudo;
-	}
-	
-	public String getAutor() {
-		return autor;
-	}
-	
-	public void setAutor(String autor) {
-		this.autor = autor;
 	}
 	
 	public Obra getObra() {
@@ -69,11 +60,4 @@ public class Trecho {
 	public void setReferencia(String referencia) {
 		this.referencia = referencia;
 	}
-	 @Override
-	    public String toString() {
-	        return "Trecho{" +
-	                "conteudo='" + conteudo + '\'' +
-	                ", id=" + id +
-	                '}';
-	    }
 }

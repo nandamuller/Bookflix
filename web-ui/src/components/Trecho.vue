@@ -3,7 +3,7 @@
         <md-card md-elevation="0">
               <md-card-content>
                   <div>"{{ trecho.conteudo }}"<br>
-                      {{ trecho.autor }} em {{ trecho.obra }} disponível em {{trecho.referencia}}
+                      {{ trecho.obra.autor.nome }} em {{ trecho.obra.titulo }} disponível <a :href="trecho.referencia" target="_blank">aqui</a>.
                   </div>
               </md-card-content>
                 <div class="trechobar-bkf" md-gutter>
@@ -42,7 +42,6 @@
      
     methods: {
         url() {
-            // debugger;
             return '/trechos/' + this.trecho.id;
         }
     }

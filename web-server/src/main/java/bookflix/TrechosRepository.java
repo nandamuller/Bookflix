@@ -12,8 +12,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RepositoryRestResource(collectionResourceRel = "trechos", path = "trechos")
 public interface TrechosRepository extends PagingAndSortingRepository<Trecho, Long> {
 	
-	// TODO remover
-	List<Trecho> findByAutor(@Param("nome") String nome);
-	
 	List<Trecho> findByConteudoContainingIgnoreCase(@Param("conteudo") String conteudo);
 }

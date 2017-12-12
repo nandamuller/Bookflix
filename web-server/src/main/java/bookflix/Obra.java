@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -20,8 +22,8 @@ public class Obra {
 	
 	private String titulo;
 
-	@JsonIgnore
 	@ManyToOne
+	@RestResource (exported = false)
 	private Autor autor;
 	
 	@OneToMany (mappedBy = "obra")
