@@ -11,21 +11,27 @@
                         <div class="bkf-cadastro">
                             <md-input-container>
                                 <label>Trecho</label>
-                                <md-textarea id="txtTrecho"></md-textarea>
+                                <md-textarea id="txtTrecho" v-model="trecho.conteudo"></md-textarea>
                             </md-input-container>
                             <md-input-container>
                                 <label>Obra</label>
-                                <md-textarea id="txtObra"></md-textarea>
+                                <md-select id="txtObra" v-model="trecho.obra.id" selected="">
+                                    <md-option disabled value="" >Selecione uma obra</md-option>
+                                    <md-option v-for="obra in obras" :key="obra.id" :value="obra.id">{{ obra.titulo }}</md-option>
+                                </md-select>
                             </md-input-container>
                             <md-input-container>
                                 <label>Autor</label>
-                                <md-textarea id="txtAutor"></md-textarea>
+                                <md-select id="txtAutor" v-model="autorSelecionado" selected="">
+                                    <md-option disabled value="" >Selecione um autor</md-option>
+                                    <md-option v-for="autor in autores" :key="autor.id" :value="autor.id">{{ autor.nome }}</md-option>
+                                </md-select>
                             </md-input-container>
                             <md-input-container>
                                 <label>Referência</label>
-                                <md-textarea id="txtRef"></md-textarea>
+                                <md-textarea id="txtRef" v-model="trecho.referencia"></md-textarea>
                             </md-input-container>
-                            <button type="button" class="button buttonBlue" v-on:click="realizaLogin">Enviar
+                            <button type="button" class="button buttonBlue" v-on:click="cadastrar">Enviar
                                 <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
                             </button>
                         </div>
@@ -50,45 +56,75 @@
 
 <script>
     import axios from 'axios'
-    
+
     export default {
-        data () {
+        created() {
+            this.buscarAutores();
+            this.buscarObras();
+        },
+        data() {
             return {
+                autorSelecionado: '',
+                autores: [],
+                obras: [],
+                trecho: {
+                    // autor: 'Lorem Ipsum',
+                    // obra: 'http://localhost:9000/obras/3',
+                    //                    {
+                    //                        id: 3,
+                    //                        href: 'http://localhost:9000/obras/3',
+                    //                        titulo: 'Quincas Borba - gambiarrado'
+                    //                    },
+                    conteudo: 'Dolor sit amet!',
+                    referencia: 'http://google.com',
+                    obra: {
+                        id: ''
+                    }
+                }
             }
         },
-        components: {
-        },
+        components: {},
         methods: {
-        realizaLogin(){
-            var trechotx = document.getElementById('txtTrecho').value;
-            var autortx = document.getElementById('txtAutor').value;
-            var obratx = document.getElementById('txtObra').value;
-            var reftx = document.getElementById('txtRef').value;
-            if(trechotx == '' || autortx == '' || obratx == '' || reftx == ''){
-                document.getElementById('alert').style.display="block";
-            }else{
-                axios.all([
-                    axios.post('http://localhost:9000/trecho',{
-                    conteudo: trechotx       
-                }),
-                    axios.post('http://localhost:9000/autor',{
-                    autor: autortx
-                  }),
-                    axios.post('http://localhost:9000/obra',{
-                    autor: obratx
-                  }),
-                    axios.post('http://localhost:9000/trecho',{
-                    referencia: reftx
-                  })
-                ])
-            .then(function(response){
-                console.log(response);
-            })
-            .catch(function(error){
-                console.log(error);
-            });
-                document.getElementById('alertSucesso').style.display="block";
-              }
+            cadastrar() {
+                //            var trechotx = document.getElementById('txtTrecho').value;
+                //            var autortx = document.getElementById('txtAutor').value;
+                //            var obratx = document.getElementById('txtObra').value;
+                //            var reftx = document.getElementById('txtRef').value;
+
+                if (false) {
+                    document.getElementById('alert').style.display = "block";
+                } else {
+                    axios.post('http://localhost:9000/trechos', this.trecho)
+                        .then(function(response) {
+                            console.log(response);
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                        });
+                    document.getElementById('alertSucesso').style.display = "block";
+                }
+            },
+            
+            buscarAutores() {
+                axios.get('http://localhost:9000/autores')
+                    .then(response => {
+                        console.log(response);
+                        this.autores = response.data._embedded.autores;
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
+            },
+            
+            buscarObras() {
+                axios.get('http://localhost:9000/obras')
+                    .then(response => {
+                        console.log(response);
+                        this.obras = response.data._embedded.obras;
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
             }
         }
     }
